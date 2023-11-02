@@ -1,0 +1,7 @@
+.idea
+node_modules
+index.js*
+dist
+
+# This part should be changed to match the package name
+node-package-showcase-*

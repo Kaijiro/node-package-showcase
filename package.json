@@ -1,0 +1,35 @@
+{
+  "name": "node-package-showcase",
+  "version": "0.0.1",
+  "description": "A simple showcase with a versioned package exposing a CLI for the user",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/Kaijiro/node-package-showcase",
+  "author": "Kaijiro",
+  "license": "MIT",
+  "bin": {
+    "node-package-showcase": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/inquirer": "^9.0.6",
+    "@types/node": "^18.18.7",
+    "@types/semver": "^7.5.4",
+    "esbuild": "^0.19.5",
+    "pkg": "^5.8.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.11",
+    "semver": "^7.5.4"
+  },
+  "scripts": {
+    "start:local": "node ./dist/index.js hello World",
+    "build": "esbuild src/index.ts --bundle --platform=node --outdir=./dist --allow-overwrite --sourcemap",
+    "package": "pkg ."
+  }
+}
